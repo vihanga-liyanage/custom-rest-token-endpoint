@@ -50,11 +50,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon.identity.inbound.provisioning.scim2</groupId>
-            <artifactId>org.wso2.carbon.identity.scim2.common</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.wso2.carbon.identity.framework</groupId>
             <artifactId>org.wso2.carbon.user.mgt</artifactId>
             <scope>provided</scope>
@@ -74,7 +69,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <warName>scim4</warName>
+                    <warName>custom</warName>
                 </configuration>
             </plugin>
             <plugin>

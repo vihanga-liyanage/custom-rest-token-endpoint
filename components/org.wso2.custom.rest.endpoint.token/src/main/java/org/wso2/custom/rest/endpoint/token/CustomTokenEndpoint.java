@@ -3,7 +3,6 @@ package org.wso2.custom.rest.endpoint.token;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.wso2.custom.rest.endpoint.token.util.Constants;
-import org.wso2.charon3.core.schema.SCIMConstants;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
@@ -21,21 +20,22 @@ public class CustomTokenEndpoint {
 
     @GET
     @Path("{id}")
-    @Produces({MediaType.APPLICATION_JSON, Constants.APPLICATION_SCIM_JSON})
-    public Response getUser(@PathParam(SCIMConstants.CommonSchemaConstants.ID) String id,
+    @Produces({MediaType.APPLICATION_JSON, Constants.APPLICATION_JSON})
+    public Response getUser(@PathParam(Constants.USERNAME) String username,
                             @HeaderParam(Constants.AUTHORIZATION) String authorizationHeader,
                             @HeaderParam(Constants.ACCEPT_HEADER) String outputFormat,
                             @QueryParam(Constants.ATTRIBUTES) String attribute,
                             @QueryParam(Constants.EXCLUDE_ATTRIBUTES) String  excludedAttributes) {
 
-        log.info("/user/{id} path hit");
+        log.info("/user/{username} path hit");
+        log.info("Username: " + username);
         Response.ResponseBuilder respBuilder = Response
                 .status(200);
         return respBuilder.entity("xxx").build();
     }
 
     @GET
-    @Produces({MediaType.APPLICATION_JSON, Constants.APPLICATION_SCIM_JSON})
+    @Produces({MediaType.APPLICATION_JSON, Constants.APPLICATION_JSON})
     public Response getUser(@HeaderParam(Constants.AUTHORIZATION) String authorizationHeader,
                             @HeaderParam(Constants.ACCEPT_HEADER) String format,
                             @QueryParam (Constants.ATTRIBUTES) String attribute,
