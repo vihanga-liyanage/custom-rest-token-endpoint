@@ -17,14 +17,11 @@ public class Constants {
     public static final String SEMI_COLON = ";";
     public static final String CHARSET= "charset";
     public static final String ACCEPT_HEADER = "Accept";
-    public static final String USERNAME = "username";
+    public static final String PATH_PARAM_USERNAME = "username";
+    public static final String PATH_PARAM_CLIENT_ID = "clientId";
     public static final String DOMAIN = "domain";
 
-    public static final String RESOURCE_STRING = "RESOURCE_STRING";
-    public static final String HTTP_VERB = "HTTP_VERB";
-    public static final String SEARCH = ".search";
-    public static final String DEFAULT_USERNAME = "admin";
-    public static final String ADD = "add";
-    public static final String REMOVE = "remove";
+    public static final String USER_STORE_DOMAIN = "PRIMARY";
+    public static final String TENANT_DOMAIN = "carbon.super";
 
 }
